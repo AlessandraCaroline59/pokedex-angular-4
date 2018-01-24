@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>Pokémon list</h3>
+    <table class="table table-striped">
+      <tr>
+        <th>#id</th>
+        <th>name</th>
+        <th>details</th>
+      </tr>
+      <tr *ngFor="let pokemon of pokemons.results; let index=index;trackBy:trackByIndex;">
+        <td>{{ index + 1 + counter }}</td>
+        <td class="capitalize">{{ pokemon.name }}</td>
+        <td> <button class="glyphicon glyphicon-zoom-in" (click)=getPokemonDetails(pokemon.url)></button>
+        </td>
+      </tr>
+    </table>
+    <div id="buttons">
+      <button (click)=previousPokemonsPage(pokemons.previous)>Previous</button>
+      <button (click)=nextPokemonsPage(pokemons.next)>Next</button>
+    </div>
+  </div>
+</div>
