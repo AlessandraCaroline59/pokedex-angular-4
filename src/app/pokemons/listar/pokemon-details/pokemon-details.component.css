@@ -2,6 +2,19 @@
    text-transform: capitalize;
 }
 
+img{
+    width:30%;
+    height: 30%;
+}
+
+h2{
+    color:#000;
+}
+
+h3{
+    color:#faa;
+}
+
 ol {
     counter-reset: li; /* Initiate a counter */
     list-style: none; /* Remove default numbering */
@@ -28,23 +41,6 @@ ol ol {
     transition: all .3s ease-out;   
 }
 
-.rounded-list li:before{
-    content: counter(li);
-    counter-increment: li;
-    position: absolute; 
-    left: -1.3em;
-    top: 50%;
-    margin-top: -1.3em;
-    background: #f75a4f;
-    height: 2em;
-    width: 2em;
-    line-height: 2em;
-    border: .3em solid #fff;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 2em;
-    transition: all .3s ease-out;
-}
 
 .nav{
     max-height: 300px;
